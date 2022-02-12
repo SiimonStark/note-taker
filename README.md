@@ -5,4 +5,4 @@ practice app
 
 
 ## Screenshot
-[Links name](link addrress go here)
+([Github Pages Link](https://siimonstark.github.io/note-taker/))
