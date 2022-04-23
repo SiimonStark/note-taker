@@ -6,6 +6,7 @@ var notes = JSON.parse(localStorage.getItem('notes')) || [];
 var noteFieldEl = document.getElementById('noteField');
 var clearBtn = document.getElementById('clear');
 var ulEls = document.querySelector('ul')
+var liEls = document.querySelectorAll('li');
 
 //event listeners
 clearBtn.addEventListener('click', function () {
@@ -13,6 +14,8 @@ clearBtn.addEventListener('click', function () {
   localStorage.clear();
   renderNotes(notes);
 });
+
+liEls.forEach((li) => li.addEventListener('click', handleNav));
 
 // if you're going to have a lot of functionality, it's better to break it down into smaller function call. This helps with maintainability and troubleshooting. You'll notice that the createNote function creates the note, then calls subsequent functions that only focus on a single piece.
 noteFieldEl.addEventListener('submit', createNote);
@@ -80,4 +83,6 @@ function renderNotes(notes) {
 
 renderNotes(notes);
 
-var test=  () => console.log('test') 
+function handleNav(e) {
+  console.log(e);
+}
