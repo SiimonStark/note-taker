@@ -5,6 +5,7 @@ var notes = JSON.parse(localStorage.getItem('notes')) || [];
 // DOM elements
 var noteFieldEl = document.getElementById('noteField');
 var clearBtn = document.getElementById('clear');
+var ulEls = document.querySelector('ul')
 
 //event listeners
 clearBtn.addEventListener('click', function () {
@@ -78,3 +79,5 @@ function renderNotes(notes) {
 }
 
 renderNotes(notes);
+
+var test=  () => console.log('test') 
